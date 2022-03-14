@@ -1,0 +1,8 @@
+import json
+data = []
+f = open('D:\\headline.json','w')
+for headline in obj.find_all('div', class_='bungkus_txt_headline_center'):
+    data.append({"judul": headline.find('h2').text})
+jdumps = json.dumps(data)
+f.writelines(jdumps)
+f.close()
